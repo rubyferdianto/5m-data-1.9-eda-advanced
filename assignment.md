@@ -25,7 +25,9 @@ returns = pd.DataFrame({
 Answer:
 
 ```python
-
+returns["MSFT"].corr(returns["IBM"])
+#-0.2401922307076306 
+#consider Weak negative linear correlation
 ```
 
 ### Question 2
@@ -45,7 +47,17 @@ df = pd.DataFrame({
 Answer:
 
 ```python
+pd.melt(df, id_vars='A', value_vars=['B', 'C'])
 
+'''
+   A variable  value
+0  a        B      1
+1  b        B      3
+2  c        B      5
+3  a        C      2
+4  b        C      4
+5  c        C      6
+'''
 ```
 
 ### Question 3
@@ -63,7 +75,7 @@ data = pd.Series(np.random.rand(len(dates)), index=dates)
 Answer:
 
 ```python
-
+data["2023-01-05":"2023-01-31"]
 ```
 
 ## Submission
